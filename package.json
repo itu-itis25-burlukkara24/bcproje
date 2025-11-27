@@ -1,0 +1,24 @@
+{
+  "name": "bcproje",
+  "version": "1.0.0",
+  "description": "itu blockchain\r Başlangıçta blockchain yapısını oluşturan blokların temel özelliklerini listeleyeceğiz\r Index of the block: Kaçıncı sıradaki blok onu anlamamızı sağlar\r Timestamp: Bloğun ne zaman oluşturulduğu bilgisini gösterir\r Data: Verinin kimden kime aktarıldığını ve ne kadar aktarıldığı bilgisini taşır\r Previous Hash: Bu zincir yapının temelidir her blok bir önceki bloğun hashini gösterir\r Hash: Bloğun kendi parmak izi\r Nonce: Madencilik için kullanılan rastgele sayı",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/itu-itis25-burlukkara24/bcproje.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/itu-itis25-burlukkara24/bcproje/issues"
+  },
+  "homepage": "https://github.com/itu-itis25-burlukkara24/bcproje#readme",
+  "dependencies": {
+    "crypto-js": "^4.2.0"
+  }
+}
