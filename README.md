@@ -17,8 +17,8 @@ Sadece temel bir zincir değil, yaşayan ve etkileşimli bir sistem kurmayı hed
 - [x] **Block** sınıfı ve veri yapısı
 - [x] **SHA-256** şifreleme algoritması
 - [x] **Mining (Proof of Work)** mekanizması ⛏️
-- [ ] **Blockchain** sınıfı ve zincirleme mantığı
-- [ ] **Genesis (İlk)** bloğun yaratılması
+- [x] **Blockchain** sınıfı ve zincirleme mantığı
+- [x] **Genesis (İlk)** bloğun yaratılması
 
 ### 🛡️ Faz 2: Güvenlik ve Doğrulama
 - [ ] **Zincir Sağlığı Kontrolü (`isChainValid`):** Zincirde manipülasyon (hack) girişimi var mı?
