@@ -54,3 +54,23 @@ class Blockchain {
         this.chain.push(newBlock);
     }
 }
+// --- 3. ADIM: ZİNCİRİN GEÇERLİLİĞİNİ KONTROL ETME VE ZİNCİRİ KORUMA ---
+    isChainValid() 
+    { 
+        for (let i = 1; i < this.chain.length; i++) {
+            
+            const currentBlock = this.chain[i];
+            const prevBlock = this.chain[i - 1];
+
+            // KONTROL 1: Bloğun hash bütünlüğü
+            if (currentBlock.hash !== currentBlock.calculateHash()) {
+                return false;
+            }
+
+            // KONTROL 2: Zincir bağlantısı
+            if (currentBlock.prevHash !== prevBlock.hash) {
+                return false;
+            }
+        }
+        return true;
+    }

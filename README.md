@@ -21,7 +21,7 @@ Sadece temel bir zincir değil, yaşayan ve etkileşimli bir sistem kurmayı hed
 - [x] **Genesis (İlk)** bloğun yaratılması
 
 ### 🛡️ Faz 2: Güvenlik ve Doğrulama
-- [ ] **Zincir Sağlığı Kontrolü (`isChainValid`):** Zincirde manipülasyon (hack) girişimi var mı?
+- [x] **Zincir Sağlığı Kontrolü (`isChainValid`):** Zincirde manipülasyon (hack) girişimi var mı?
 - [ ] **Dinamik Zorluk Seviyesi:** Ağ gücüne göre madenciliğin zorlaşması.
 
 ### 💾 Faz 3: Kalıcılık ve Arayüz (Bonus Features)

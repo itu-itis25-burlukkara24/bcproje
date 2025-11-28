@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/itu-itis25-burlukkara24/bcproje#readme",
   "dependencies": {
-    "crypto-js": "^4.2.0"
+    "crypto-js": "^4.2.0",
+    "crypto.js": "^3.3.4"
   }
 }
