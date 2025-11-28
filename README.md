@@ -14,8 +14,8 @@ Aşağıdaki adımları hafta sonuna kadar tamamlamayı planlıyoruz:
 
 - [x] Proje dosyalarının oluşturulması (`npm init`)
 - [x] Gerekli kütüphanelerin eklenmesi (`crypto-js`)
-- [ ] **Block** sınıfının kodlanması
+- [x] **Block** sınıfının kodlanması
 - [ ] **Blockchain** sınıfının kodlanması
 - [ ] Genesis (İlk) bloğun oluşturulması
-- [ ] SHA-256 Hash algoritmasının entegre edilmesi
-- [ ] **Mining (Proof of Work)** mekanizmasının eklenmesi (Bonus Hedef) ⛏️
+- [x] SHA-256 Hash algoritmasının entegre edilmesi
+- [x] **Mining (Proof of Work)** mekanizmasının eklenmesi (Bonus Hedef) ⛏️
