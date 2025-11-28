@@ -1,7 +1,7 @@
-//Hash'i hesaplayabilmek için kripto modülünü çekiyoruz
+// --- 1. ADIM: BLOK YAPISI ---
 const SHA256 = require('crypto-js/sha256');
 
-//En temel parça olan bloğu oluşturacak olan kod
+// En temel parça olan bloğu oluşturacak olan kod
 class Block {
     constructor(index, timestamp, data, prevHash = '') {
         this.index =index;
@@ -11,12 +11,12 @@ class Block {
         this.nonce = 0;
         this.hash = this.calculateHash();
     }
-
+// Hash'i hesaplıyoruz
     calculateHash() {
         return SHA256(this.index + this.timestamp + this.prevHash + JSON.stringify(this.data) + this.nonce).toString();
     }
 
-    //Madencilik için gerekli fonksiyon daha difficulty belirlenmedi
+    // Madencilik yapan fonksiyonumuz bu şekilde ilk ürettiğimiz blok bile bizim istediğimiz formatta olacak
     mineBlock(difficulty) {
         while(this.hash.substring(0, difficulty) !== Array(difficulty +1).join("0")) {
             this.nonce++;
@@ -28,31 +28,29 @@ class Block {
 // --- 2. ADIM: ZİNCİR (BLOCKCHAIN) YAPISI ---
 class Blockchain {
     constructor() {
-        // Tren raylara indiğinde ilk vagonu (Genesis) otomatik ekle
         this.chain = [this.createGenesisBlock()];
-        this.difficulty = 2; // Zorluk seviyesi (Mining için)
+        this.difficulty = 2; // Mining'i yavaşlatmak için eklediğimiz difficulty değeri
     }
 
-    // İlk vagonu (Atayı) yaratan fonksiyon
+    // İlk bloğu yaratan fonksiyon
     createGenesisBlock() {
         return new Block(1, "28/11/2025", "Genesis Block", "0");
     }
 
-    // Zincirin en sonundaki vagonu bulur
+    // Zincirin en sonundaki bloğu bulur
     getLatestBlock() {
         return this.chain[this.chain.length - 1];
     }
 
-    // Zincire yeni vagon ekler
+    // Zincire yeni blok ekler
     addBlock(newBlock) {
-        // 1. Yeni gelen vagonun "prevHash"ine, şu anki son vagonun hash'ini yazar
+        // Yeni gelen bloğun "prevHash"ine, şu anki son bloğun hash'ini yazar
         newBlock.prevHash = this.getLatestBlock().hash;
 
-        // 2. Madencilik (Mining) işlemini başlatır
-        // (Zorluk seviyesine göre hash bulmaya çalışır)
+        // 2. Madencilik işlemini başlatır
         newBlock.mineBlock(this.difficulty);
 
-        // 3. Vagonu zincire ekler
+        // 3. Bloğu zincire ekler
         this.chain.push(newBlock);
     }
 }
