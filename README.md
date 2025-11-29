@@ -25,5 +25,5 @@ Sadece temel bir zincir değil, yaşayan ve etkileşimli bir sistem kurmayı hed
 - [ ] **Dinamik Zorluk Seviyesi:** Ağ gücüne göre madenciliğin zorlaşması.
 
 ### 💾 Faz 3: Kalıcılık ve Arayüz (Bonus Features)
-- [ ] **Veri Kalıcılığı (JSON):** Program kapansa bile blokların silinmemesi için dosya sistemi (`fs`) entegrasyonu.
+- [x] **Veri Kalıcılığı (JSON):** Program kapansa bile blokların silinmemesi için dosya sistemi (`fs`) entegrasyonu.
 - [ ] **CLI Arayüzü:** Kullanıcının terminal üzerinden interaktif işlem yapabilmesi (Menü sistemi).

@@ -1,0 +1,50 @@
+[
+    {
+        "index": 0,
+        "timestamp": 1764424919450,
+        "data": "Genesis Block",
+        "prevHash": "0",
+        "nonce": 0,
+        "hash": "0628b74251f5502205a76fa6dbd464c15fa7986b1e21703d20037ac02c76c24d"
+    },
+    {
+        "index": 1,
+        "timestamp": 1764424919455,
+        "data": {
+            "mesaj": "Manuel ekleme testi"
+        },
+        "prevHash": "0628b74251f5502205a76fa6dbd464c15fa7986b1e21703d20037ac02c76c24d",
+        "nonce": 43,
+        "hash": "00c1595c8d74dfc5f25e1a1f26b0e0c80876b3340a92b2f7b4b3b2b76c626271"
+    },
+    {
+        "index": 2,
+        "timestamp": 1764424919493,
+        "data": {
+            "amount": 50
+        },
+        "prevHash": "00c1595c8d74dfc5f25e1a1f26b0e0c80876b3340a92b2f7b4b3b2b76c626271",
+        "nonce": 8,
+        "hash": "00a1c19d367fd6a3b2e3b306de5434a6b41f01f158de34bca17bb8ce4796beaf"
+    },
+    {
+        "index": 3,
+        "timestamp": 1764424919497,
+        "data": {
+            "amount": 20
+        },
+        "prevHash": "00a1c19d367fd6a3b2e3b306de5434a6b41f01f158de34bca17bb8ce4796beaf",
+        "nonce": 169,
+        "hash": "0053b700290acd4506d34eb489b1e4cba51669d741af53ef38868383b1a03f18"
+    },
+    {
+        "index": 4,
+        "timestamp": 1764424919519,
+        "data": {
+            "amount": 24
+        },
+        "prevHash": "0053b700290acd4506d34eb489b1e4cba51669d741af53ef38868383b1a03f18",
+        "nonce": 53,
+        "hash": "00d5558968c802832eabae2a504eccb3c6d1952d0e2653981659ca7352c3d566"
+    }
+]
