@@ -26,4 +26,4 @@ Sadece temel bir zincir değil, yaşayan ve etkileşimli bir sistem kurmayı hed
 
 ### 💾 Faz 3: Kalıcılık ve Arayüz (Bonus Features)
 - [x] **Veri Kalıcılığı (JSON):** Program kapansa bile blokların silinmemesi için dosya sistemi (`fs`) entegrasyonu.
-- [ ] **CLI Arayüzü:** Kullanıcının terminal üzerinden interaktif işlem yapabilmesi (Menü sistemi).
+- [x] **CLI Arayüzü:** Kullanıcının terminal üzerinden interaktif işlem yapabilmesi (Menü sistemi).
