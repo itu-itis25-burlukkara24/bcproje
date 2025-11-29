@@ -3,7 +3,7 @@
 const SHA256 = require('crypto-js/sha256');
 const fs = require('fs');
 // Testing Codes dosyasından fonksiyonları çekiyoruz
-const { zincirUret, blokEkle, hackSenaryosu } = require('./Testing Codes');
+const { zincirUret, blokEkle, hackSenaryosu } = require('./testfunctions');
 
 // --- 1. ADIM: BLOK YAPISI ---
 class Block {
