@@ -1,4 +1,4 @@
-# 🚧 Basic Blockchain Project (Week 3)
+# 🚧 Gwakchain 
 
 Bu repo, **İTÜ Blockchain Kulübü** 3. hafta eğitimi kapsamında verilen "Node.js ile Kendi Blockchain'ini Yaz" ödevi için oluşturulmuştur.
 
