@@ -1,10 +1,14 @@
 // --- BLOCKCHAIN PROJE ---
 // Gerekli kütüphaneler 
-const SHA256 = require('crypto-js/sha256');
-const fs = require('fs');
-// Testing Codes dosyasından fonksiyonları çekiyoruz
-const { zincirUret, blokEkle, hackSenaryosu } = require('./testfunctions');
+import crypto from 'crypto';
+import fs from 'fs';
+import CLI from './cli.js';
 
+// Testing Codes dosyasından fonksiyonları çekiyoruz
+import {zincirUret, blokEkle, hackSenaryosu, }  from "./testfunctions.js";
+function SHA256(message) {
+    return crypto.createHash('sha256').update(message).digest('hex');
+}
 // --- 1. ADIM: BLOK YAPISI ---
 class Block {
     constructor(index, timestamp, data, prevHash = '') {
@@ -102,23 +106,7 @@ class Blockchain {
     }
 }
 
-// --- TEST ALANI (Execution Area) ---
-
-// 1. Manuel Kullanım Örneği
-console.log("\n--- MANUEL TEST ---");
-let benimZincirim = new Blockchain(); // Varsayılan olarak chain.json kullanır
-
-// DİKKAT: 'Block' sınıfını parametre olarak gönderiyoruz!
-blokEkle(benimZincirim, Block, { mesaj: "Manuel ekleme testi" });
-
-// 2. Otomatik Zincir Testi
-console.log("\n--- OTOMATİK ZİNCİR TESTİ ---");
-// Hem Blockchain hem Block sınıfını gönderiyoruz
-let otoZincir = zincirUret(Blockchain, Block, 3); 
-
-// 3. Sonuçları Görme
-console.log("\n--- OLUŞAN ZİNCİR ---");
-console.log(JSON.stringify(otoZincir, null, 4));
-
-// 4. Hack Testi
-hackSenaryosu(otoZincir);
+let anaZincir = new Blockchain();
+CLI.baslikYazdir();
+const testAraclari = { zincirUret, blokEkle, hackSenaryosu };
+CLI.menuBaslat(anaZincir, Block, testAraclari);
